@@ -31,4 +31,4 @@ export class TaskDTO {
   updateTime: Date;
 }
 
-export class CreateTaskDTO extends OmitDto(TaskDTO, ['id']) {}
+export class CreateTaskDTO extends OmitDto(TaskDTO, ['id', 'updateTime']) {}

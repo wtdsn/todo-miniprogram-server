@@ -24,4 +24,9 @@ export default {
       },
     },
   },
+  validate: {
+    validationOptions: {
+      stripUnknown: true, // 全局生效
+    },
+  },
 } as MidwayConfig;

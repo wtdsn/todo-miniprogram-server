@@ -15,8 +15,6 @@ export class JwtMiddleware {
     return async (ctx: Context, next: NextFunction) => {
       // 判断下有没有校验信息
       if (!ctx.headers['authorization']) {
-        console.log('no');
-
         throw new httpError.UnauthorizedError();
       }
       // 从 header 上获取校验信息

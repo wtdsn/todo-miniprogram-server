@@ -9,9 +9,6 @@ import { JwtMiddleware } from './middleware/jwt';
 import * as jwt from '@midwayjs/jwt';
 import * as orm from '@midwayjs/typeorm';
 
-import { NotFoundFilter } from './filter/notfound.filter';
-import { DefaultErrorFilter } from './filter/default.filter';
-
 @Configuration({
   imports: [
     koa,
@@ -32,7 +29,5 @@ export class MainConfiguration {
   async onReady() {
     // add middleware
     this.app.useMiddleware([JwtMiddleware, ResponseMiddleware]);
-    // add filter
-    this.app.useFilter([NotFoundFilter, DefaultErrorFilter]);
   }
 }
