@@ -1,0 +1,1 @@
+npx mdl-gen-midway -h localhost -p 3306 -d todo-miniprogram -u root -x 123456 -e mysql -o ../entity_auto --noConfig --case-property none
