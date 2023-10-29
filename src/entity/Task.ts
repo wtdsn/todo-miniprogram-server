@@ -22,8 +22,8 @@ export class Task {
   creatorId: string;
 
   @Column('timestamp', {
-    name: 'updateTime',
+    name: 'createTime',
     default: () => 'CURRENT_TIMESTAMP',
   })
-  updateTime: Date;
+  createTime: Date;
 }
